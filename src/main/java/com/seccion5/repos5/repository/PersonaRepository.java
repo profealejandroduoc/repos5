@@ -45,6 +45,15 @@ public class PersonaRepository {
         return null;
     }
 
+    public Persona readByRut(String rut){
+        for (Persona persona : personas) {
+            if(persona.getRut().equals(rut)){
+                return persona;
+            }
+        }
+        return null;
+    }
+
     public Persona update(int id, Persona pmodificada){
         Persona per=read(id);
         if(per!=null){

@@ -27,6 +27,11 @@ public class PersonaService {
         return personaRepository.read(id);
     }
 
+
+    public Persona buscarxrut(String rut){
+        return personaRepository.readByRut(rut);
+    }
+
     public Persona modificarPersona(int id, Persona pmodificada){
         return personaRepository.update(id, pmodificada);
     }
